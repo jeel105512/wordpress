@@ -8,7 +8,6 @@
     */
     while(have_posts()){
         the_post(); ?>
-        <a href="<?php echo home_url(); ?>">Back to Blog</a>
         <!-- we can use home_url() to get the link back to home page  -->
         <h2><?php the_title() ?></h2>
         <p><?php the_content() ?></p>
