@@ -22,5 +22,3 @@
     <a href="<?php echo site_url(); ?>">Home</a>
     <a href="<?php echo site_url("the-loop") ?>">The Loop</a>
 </nav>
-</body>
-</html>
