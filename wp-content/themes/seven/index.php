@@ -21,5 +21,14 @@
         <hr>
     <?php }
 
+    /*
+    get_theme_file_uri("path")
+    this will help us to access the directory and its resources inside the wp_content
+    without us needing to type a long uri
+
+    we can also use this function in the functions.php to load our javascript
+    */ 
+    ?><img src="<?php echo get_theme_file_uri("/images/Card-5.jpg"); ?>" alt=""><?php
+
     get_footer();
 ?>
