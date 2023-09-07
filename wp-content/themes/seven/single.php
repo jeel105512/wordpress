@@ -1,4 +1,5 @@
 <?php
+    get_header();
     /*
     if we want to control the content of the individual/details page of the block post using the_permalink() method,
     we need to create a new php file named "single.php"
@@ -12,4 +13,6 @@
         <h2><?php the_title() ?></h2>
         <p><?php the_content() ?></p>
     <?php }
+
+    get_footer();
 ?>

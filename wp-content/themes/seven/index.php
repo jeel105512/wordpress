@@ -1,4 +1,6 @@
-<?php
+<?php 
+    get_header();
+
     /*
     The Loop
     we can use have_posts() to see if we have any post
@@ -18,4 +20,6 @@
         <p><?php the_content() ?></p>
         <hr>
     <?php }
+
+    get_footer();
 ?>

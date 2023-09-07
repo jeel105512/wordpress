@@ -1,0 +1,1 @@
+<h1>This is the header from header.php</h1>
