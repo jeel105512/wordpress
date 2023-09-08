@@ -30,6 +30,43 @@
             <a href="">URLs SEO</a>
         </nav>
         <p><?php the_content() ?></p>
+        <?php 
+                /*
+                get_the_ID()
+                this wordpress method will give us the id of the page that
+                we are currently viewing
+
+                wp_get_post_parent_id()
+                this wordpress method will give us the id of the parent page
+                of the page that we are viewing currently
+
+                if we want the parent page id of a specific page, we can pass the id
+                of that child page in the wp_get_post_parent_id() method
+
+                so, we can do something like this to get the id of the parent page of the child
+                page that we are viewing,
+                wp_get_post_parent_id(get_the_ID())
+                */
+                $parentPageId = wp_get_post_parent_id(get_the_ID());
+                if($parentPageId){ // if the current page is a child, meaning if the current page has a parent page
+                ?>    
+                    <div>
+                        <!-- 
+                            the_title();
+                            this will get the title of the current post or page
+
+                            get_the_title();
+                            this will get the title of the post or page whose id you pass as an argument
+
+                            get_permalink();
+                            instead of being limited to just the current page or post that we have looped through
+                            we can pass it an id, and it will give us the permalink for that post or page
+                         -->
+                        <a href="<?php echo get_permalink($parentPageId); ?>">Back to <?php echo get_the_title($parentPageId); ?></a>
+                        <p>You are on the page: <?php the_title(); ?></p>
+                    </div>
+                <?php } 
+            ?>
     <?php }
 
     get_footer();
